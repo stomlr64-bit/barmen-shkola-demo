@@ -112,6 +112,7 @@
     .hero__copy h1 { font-size: clamp(1.7rem, 1.1rem + 2.8vw, 2.3rem); line-height: 1.04; }
     .hero__copy .v-lede { font-size: var(--v-t-base); margin-top: var(--v-3); }
     .hero__cta { margin-top: var(--v-4); flex-direction: column; align-items: flex-start; gap: var(--v-3); }
+    .hero__hint { font-size: var(--v-t-base); color: var(--v-ink); max-width: none; line-height: 1.45; }
     .hero__turn h2 { font-size: clamp(1.7rem, 1.1rem + 2.6vw, 2.3rem); }
     .hero__turn p { margin-top: var(--v-4); }
     /* стикеры на телефоне: кучка на столе над тетрадью, в две строки, всё в кадре */
@@ -218,6 +219,13 @@
     .nb { --pg: min(calc(100vw - 2 * var(--v-gutter) - 1rem), calc((100svh - 26.5rem) / 1.38), 20rem); --lh: 1.6rem; --pad: 1.1rem; margin: var(--v-3) 0 0 calc(50% - var(--pg) * 1.5); align-self: start; }
   }
   @media (max-width: 400px) { .nb { --lh: 1.5rem; } }
+  /* на телефоне листы тетради заполняем крупнее: меньше пустой бумаги */
+  @media (max-width: 860px) {
+    .nb { --lh: 1.95rem; }
+    .pg__title { font-size: var(--v-t-xl); }
+    .pg__lines li, .pg__hw, .pg__note { font-size: var(--v-t-base); }
+  }
+  @media (max-width: 400px) { .nb { --lh: 1.85rem; } }
   @media (min-width: 861px) and (max-height: 760px) { .nb { --lh: 1.6rem; --pad: 1.1rem; } .plan__copy > p { display: none; } }
   @media (prefers-reduced-motion: reduce) { .leaf { transform: rotateY(calc(var(--f) * -180deg)); } }
 
@@ -406,7 +414,7 @@
           <figure class="hero__card"><img src="assets/komu.webp" alt="" width="1000" height="1333"></figure>
         </div>
 
-        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.5 0 0.1">
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.52 0 0.05">
           <p class="hero__label">Барменская школа</p>
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Курсы бармена в Твери: от первого коктейля до смены за стойкой</h1>
           <p class="v-lede">Смотрите программу по этапам, формат и цену – и решаете, записываться ли. Без сюрпризов после оплаты.</p>
@@ -416,7 +424,7 @@
           </div>
         </div>
 
-        <div class="v-copy v-copy--lead hero__turn" data-v-cue="0.5 1 0.08 0">
+        <div class="v-copy v-copy--lead hero__turn" data-v-cue="0.5 1 0.05 0">
           <p class="hero__label">Почему бросают на полпути</p>
           <h2 class="v-display">Без программы курс – это «показали пару коктейлей»</h2>
           <p class="v-lede">Через пару занятий непонятно, чему уже научились и что дальше. <b>Поэтому порядок такой:</b> программа по этапам, практика и итог каждого этапа.</p>
