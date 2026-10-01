@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow" data-publish>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{{компания}} · барменская школа</title>
-<meta name="description" content="Барменская школа {{компания}} в {{город}}: курсы с нуля, для практиков и обучение персонала. Программа по этапам, формат и цена известны до оплаты.">
+<title>Школа бармена «Стойка» · барменская школа</title>
+<meta name="description" content="Барменская школа Школа бармена «Стойка» в Твери: курсы с нуля, для практиков и обучение персонала. Программа по этапам, формат и цена известны до оплаты.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="{{компания}}">
-<meta property="og:title" content="{{компания}} · барменская школа">
+<meta property="og:site_name" content="Школа бармена «Стойка»">
+<meta property="og:title" content="Школа бармена «Стойка» · барменская школа">
 <meta property="og:description" content="Программа по этапам, а не «покажем пару коктейлей». Формат и цена курса – до оплаты.">
-<meta property="og:url" content="{{ссылка-сайта}}">
-<meta property="og:image" content="{{ссылка-сайта}}/assets/og.jpg">
+<meta property="og:url" content="https://stomlr64-bit.github.io/barmen-shkola-demo/">
+<meta property="og:image" content="https://stomlr64-bit.github.io/barmen-shkola-demo//assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
 <link rel="stylesheet" href="vibe.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","EducationalOrganization"],"name":"{{компания}}","description":"Барменская школа: курсы с нуля, для практиков и обучение персонала. Программа по этапам, цена до оплаты.","url":"{{ссылка-сайта}}","image":"{{ссылка-сайта}}/assets/og.jpg","telephone":"{{телефон}}","address":{"@type":"PostalAddress","streetAddress":"{{адрес}}","addressLocality":"{{город}}","addressCountry":"RU"},"areaServed":"{{город}}","openingHours":"{{часы}}","priceRange":"от {{цена}} ₽ за курс","sameAs":["{{ссылка-карты}}"]}
+{"@context":"https://schema.org","@type":["LocalBusiness","EducationalOrganization"],"name":"Школа бармена «Стойка»","description":"Барменская школа: курсы с нуля, для практиков и обучение персонала. Программа по этапам, цена до оплаты.","url":"https://stomlr64-bit.github.io/barmen-shkola-demo/","image":"https://stomlr64-bit.github.io/barmen-shkola-demo//assets/og.jpg","address":{"@type":"PostalAddress","streetAddress":"ул. Учебная, 1","addressLocality":"Тверь","addressCountry":"RU"},"areaServed":"Тверь","openingHours":"Пн-сб 12:00-21:00","priceRange":"от 12 000 ₽ за курс"}
 </script>
 <style>
   html, body { margin: 0; background: #f6f3ec; }
@@ -68,9 +68,11 @@
   .bar .v-btn { padding: .72em 1.25em; font-size: var(--v-t-sm); }
   @media (max-width: 1040px) { .tabs a[data-long] { display: none; } }
   @media (max-width: 860px) {
-    .bar { grid-template-columns: auto auto; justify-content: space-between; gap: var(--v-3); }
+    .bar { grid-template-columns: minmax(0, 1fr) auto; justify-content: space-between; gap: var(--v-3); }
     .tabs { display: none; }
-    .bar .v-btn { padding: .65em 1em; }
+    .bar__mark { font-size: var(--v-t-base); min-width: 0; }
+    .bar__mark span { overflow: hidden; text-overflow: ellipsis; }
+    .bar .v-btn { padding: .65em 1em; white-space: nowrap; }
   }
 
   /* ---- 1 · обложка: стол ученика с задачами (учебники, тетрадь, калькулятор,
@@ -361,15 +363,14 @@
   <span data-v-progress></span>
 
   <header class="bar">
-    <a class="bar__mark" href="#top"><i aria-hidden="true"></i><span>{{компания}}</span></a>
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i><span>Школа бармена «Стойка»</span></a>
     <nav class="tabs" aria-label="Закладки">
       <a href="#plan">Программа</a>
       <a href="#zanyatie">Занятие</a>
       <a href="#ceny">Цены</a>
       <a href="#prepod" data-long>Преподаватель</a>
-      <a href="#otzyvy" data-long>Отзывы</a>
     </nav>
-    <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться на курс</a>
+    <a class="v-btn" href="https://t.me/neyro_stom" target="_blank" rel="noopener">Записаться на курс</a>
   </header>
 
   <main>
@@ -394,7 +395,7 @@
           <div class="hero__cover">
             <div class="cover__label">
               <b>Программа курса</b>
-              <span>Школа: <i>{{компания}}</i></span>
+              <span>Школа: <i>Школа бармена «Стойка»</i></span>
               <span>Ученик:</span>
               <span>Цель:</span>
             </div>
@@ -407,11 +408,11 @@
 
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.5 0 0.1">
           <p class="hero__label">Барменская школа</p>
-          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Курсы бармена в {{город}}: от первого коктейля до смены за стойкой</h1>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Курсы бармена в Твери: от первого коктейля до смены за стойкой</h1>
           <p class="v-lede">Смотрите программу по этапам, формат и цену – и решаете, записываться ли. Без сюрпризов после оплаты.</p>
           <div class="hero__cta">
-            <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Записаться на курс</a>
-            <p class="hero__hint">Курс – {{длительность}}, <b>{{цена}}&nbsp;₽</b>. Ближайший набор – {{дата набора}}.</p>
+            <a class="v-btn" href="https://t.me/neyro_stom" target="_blank" rel="noopener" data-v-magnet="0.2" data-v-rise="0">Записаться на курс</a>
+            <p class="hero__hint">Курс – 6 недель, <b>24 000&nbsp;₽</b>. Ближайший набор – 13 октября.</p>
           </div>
         </div>
 
@@ -494,7 +495,7 @@
                   <li>Разбор по пунктам</li>
                   <li>Что дальше: работа или новый уровень</li>
                 </ul>
-                <p class="pg__hw"><b>Итог:</b> {{документ об окончании}}</p>
+                <p class="pg__hw"><b>Итог:</b> сертификат школы</p>
               </div>
               <div class="leaf__face leaf__back"></div>
             </div>
@@ -545,7 +546,7 @@
               <div class="leaf__face leaf__front">
                 <div class="cover__label">
                   <b>Программа курса</b>
-                  <span>Школа: <i>{{компания}}</i></span>
+                  <span>Школа: <i>Школа бармена «Стойка»</i></span>
                   <span>Ученик:</span>
                   <span>Цель:</span>
                 </div>
@@ -554,8 +555,8 @@
               <div class="leaf__face leaf__back">
                 <p class="pg__note">Как читать</p>
                 <div class="pg__blank">
-                  <span>Занятий в неделю<i>{{занятий}}</i></span>
-                  <span>Длительность<i>{{длительность}}</i></span>
+                  <span>Занятий в неделю<i>2</i></span>
+                  <span>Длительность<i>6 недель</i></span>
                   <span>Итог после<i>каждого этапа</i></span>
                 </div>
                 <p class="pg__hw">Программа – до оплаты</p>
@@ -578,13 +579,13 @@
               <span class="v-label">Занятие</span>
               <h2 class="v-display">Как проходит занятие</h2>
               <p>Каждое занятие по одной схеме: теория коротко, практика – большую часть времени.</p>
-              <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться на курс</a>
+              <a class="v-btn" href="https://t.me/neyro_stom" target="_blank" rel="noopener">Записаться на курс</a>
             </div>
 
             <div class="card card--photo">
               <figure>
                 <img src="assets/hourglass.webp" alt="Бокалы и шейкер на барной стойке" width="1600" height="900" loading="lazy">
-                <figcaption><b>Занятие – {{длительность занятия}}.</b> Расписание – {{расписание}}.</figcaption>
+                <figcaption><b>Занятие – 3 часа.</b> Расписание – вт и чт, 18:30-21:30.</figcaption>
               </figure>
             </div>
 
@@ -632,9 +633,9 @@
           <h2 class="v-display v-display--md">Цена курса – до оплаты</h2>
           <p>Программа, длительность и стоимость каждого курса известны заранее.</p>
           <ul class="terms">
-            <li><span><b>Где</b> – {{адрес}}</span></li>
-            <li><span><b>Оплата</b> – {{условия оплаты}}</span></li>
-            <li><span><b>Расписание</b> – {{расписание}}</span></li>
+            <li><span><b>Где</b> – ул. Учебная, 1</span></li>
+            <li><span><b>Оплата</b> – перед стартом, можно в два платежа</span></li>
+            <li><span><b>Расписание</b> – вт и чт, 18:30-21:30</span></li>
           </ul>
         </div>
         <figure class="prices__fig" data-v-in>
@@ -643,12 +644,12 @@
         </figure>
         <div class="prices__list">
           <ul class="rows" data-v-in data-v-stagger="50">
-            <li><h3>Курс бармена с нуля</h3><span class="time">{{длительность}}</span><span class="price v-nums">{{цена}}&nbsp;₽</span><p>Для новой профессии или подработки: от устройства бара до итоговой смены.</p></li>
-            <li><h3>Курс для практиков</h3><span class="time">{{длительность}}</span><span class="price v-nums">{{цена}}&nbsp;₽</span><p>Для тех, кто уже за стойкой: классика, скорость, сервис.</p></li>
-            <li><h3>Обучение персонала</h3><span class="time">{{длительность}}</span><span class="price v-nums">{{цена}}&nbsp;₽</span><p>Для баров и ресторанов: одна программа для всей смены.</p></li>
+            <li><h3>Курс бармена с нуля</h3><span class="time">6 недель</span><span class="price v-nums">24 000&nbsp;₽</span><p>Для новой профессии или подработки: от устройства бара до итоговой смены.</p></li>
+            <li><h3>Курс для практиков</h3><span class="time">3 недели</span><span class="price v-nums">16 000&nbsp;₽</span><p>Для тех, кто уже за стойкой: классика, скорость, сервис.</p></li>
+            <li><h3>Обучение персонала</h3><span class="time">2 недели</span><span class="price v-nums">12 000&nbsp;₽</span><p>Для баров и ресторанов: одна программа для всей смены.</p></li>
           </ul>
           <div class="cta" data-v-in>
-            <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться на курс</a>
+            <a class="v-btn" href="https://t.me/neyro_stom" target="_blank" rel="noopener">Записаться на курс</a>
             <span>Напишите, какая у вас цель: подскажем курс и ближайший набор.</span>
           </div>
         </div>
@@ -662,9 +663,9 @@
           <img src="assets/teacher.webp" alt="Руки бармена со стрейнером над бокалом" width="1000" height="1333" loading="lazy">
           <div class="v-scrim v-scrim--light v-scrim--band" aria-hidden="true"></div>
           <figcaption>
-            <b>{{преподаватель}}</b>
-            <span>преподаватель, {{компания}}</span>
-            <span class="fact">{{опыт}}</span>
+            <b>Андрей Белов</b>
+            <span>преподаватель, Школа бармена «Стойка»</span>
+            <span class="fact">Бармен-практик: работает на смене и ведёт курс</span>
           </figcaption>
         </figure>
         <div class="prep__copy" data-v-in data-v-stagger="70">
@@ -679,37 +680,6 @@
       </div>
     </section>
 
-    <!-- 7 · ОТЗЫВЫ С ЯНДЕКС.КАРТ: только настоящие, целиком на слотах -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#f6f3ec" id="otzyvy" aria-label="Отзывы с Яндекс.Карт">
-      <div class="v-wrap reviews">
-        <div class="reviews__head" data-v-in data-v-stagger="60">
-          <div>
-            <span class="v-label">Отзывы</span>
-            <h2 class="v-display v-display--lg">Что пишут на Яндекс.Картах</h2>
-          </div>
-          <div class="reviews__rating">
-            <span class="reviews__num v-nums">{{рейтинг}}</span>
-            <span class="reviews__stars" style="--r: {{рейтинг}}" role="img" aria-label="рейтинг {{рейтинг}} из 5"></span>
-            <span><span class="v-soft">{{отзывов}} отзывов</span> · <a href="{{ссылка-карты}}" target="_blank" rel="noopener">Читать все отзывы</a></span>
-          </div>
-        </div>
-        <ul class="reviews__list" data-v-in data-v-stagger="90">
-          <li class="reviews__item reviews__item--big">
-            <p class="reviews__text">«{{отзыв 1}}»</p>
-            <p class="reviews__meta"><b>{{имя 1}}</b> · {{дата 1}} · <span class="reviews__stars reviews__stars--sm" style="--r: {{оценка 1}}" role="img" aria-label="оценка {{оценка 1}} из 5"></span></p>
-          </li>
-          <li class="reviews__item">
-            <p class="reviews__text">«{{отзыв 2}}»</p>
-            <p class="reviews__meta"><b>{{имя 2}}</b> · {{дата 2}} · <span class="reviews__stars reviews__stars--sm" style="--r: {{оценка 2}}" role="img" aria-label="оценка {{оценка 2}} из 5"></span></p>
-          </li>
-          <li class="reviews__item">
-            <p class="reviews__text">«{{отзыв 3}}»</p>
-            <p class="reviews__meta"><b>{{имя 3}}</b> · {{дата 3}} · <span class="reviews__stars reviews__stars--sm" style="--r: {{оценка 3}}" role="img" aria-label="оценка {{оценка 3}} из 5"></span></p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
     <!-- 8 · ЗАПИСЬ НА ПРОБНОЕ: финал держит реплику, футер внутри сцены -->
     <section data-v-act="pin" data-v-span="1.4" id="zapis" aria-label="Записаться на курс">
       <div data-v-stage>
@@ -719,22 +689,19 @@
               <h2 class="v-display">Запишитесь на курс</h2>
               <p>Напишите, какая у вас цель – работа, подработка или обучение персонала: подскажем подходящий курс, ближайший набор и цену.</p>
               <div class="fin__btns">
-                <a class="v-btn" href="{{ссылка-записи}}" target="_blank" rel="noopener">Записаться на курс</a>
-                <a class="v-btn v-btn--ghost" href="tel:{{телефон}}">Позвонить</a>
+                <a class="v-btn" href="https://t.me/neyro_stom" target="_blank" rel="noopener">Записаться на курс</a>
               </div>
             </div>
             <div class="fin__meta" data-v-cue="0.1">
-              <a class="fin__tel" href="tel:{{телефон}}">{{телефон}}</a>
               
-              <span><b>Адрес</b> – {{адрес}}, {{город}}</span>
-              <span>{{часы}}, по записи</span>
+              <span><b>Адрес</b> – ул. Учебная, 1, Тверь</span>
+              <span>Пн-сб 12:00-21:00, по записи</span>
               
-              <a href="{{ссылка-карты}}" target="_blank" rel="noopener">Как добраться: карточка на Яндекс.Картах</a>
             </div>
           </div>
           <footer class="foot">
-            <span>{{компания}} · барменская школа · {{город}}</span>
-            <span>Курсы с нуля, для практиков и обучение персонала</span>
+            <span>Школа бармена «Стойка» · барменская школа · Тверь</span>
+            <span>Учебная работа: данные вымышленные</span>
           </footer>
         </div>
       </div>
